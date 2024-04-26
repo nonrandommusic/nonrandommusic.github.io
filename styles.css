@@ -1,11 +1,17 @@
 :root {
-    --background-color: rgb(11,21,46);
-    --primary-text-color: rgb(242, 241, 245);
+    --background-color-top: #0b152e;
+    --background-color-bottom: #065168;
+    --primary-text-color: #f2f1fa;
+    --link-text-color: #body {
+    };
 }
 
 body {
     color: var(--primary-text-color);
     background: var(--background-color);
+    background: linear-gradient(to bottom, var(--background-color-top), var(--background-color-bottom));
+    background-attachment: fixed;
+    background-size: 100% 100%;
     font-family: "Montserrat", sans-serif;
     text-align: center;
     margin-left: 20%;
@@ -13,8 +19,8 @@ body {
 }
 
 img {
-    border: 1px solid white;
-    max-width: 40%;
+    border: 1px solid #ffffff;
+    max-width: 50%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -22,5 +28,34 @@ img {
 }
 
 a {
-    color: rgb(223,88,56);
+    color: #e95838;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+
+form input[type="email"] {
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1em;
+}
+
+form input[type="submit"] {
+    padding: 1em;
+    background-color: #e95838;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ca4424;
 }
